@@ -33,5 +33,25 @@ fs.readFile('src/inputs/day3.txt', 'utf8' , (err, data) => {
         }
     }
     console.log(parseInt(gammaRate.join(""), 2) * parseInt(epsilonRate.join(""), 2));
+
+
+    //WIP
+    //let oxyGenRate = [];
+    //for(let i = 0; i < columns.length; i++)
+    //{
+    //    if(columns[i] > 0)
+    //    {
+    //        data.forEach((line, index) => {
+    //            if(line[i] == 1)
+    //            {
+    //                oxyGenRate.push(line);
+    //            }
+    //        });
+    //    }
+    //    if(columns[i] < 0)
+    //    {
+    //        
+    //    }
+    //}
 })
 

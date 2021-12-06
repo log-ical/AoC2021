@@ -2,6 +2,7 @@ export{}
 const fs = require('fs');
 
 fs.readFile('src/inputs/day3.txt', 'utf8' , (err, data) => {
+    const dataArray = data.split('\n').map(line => line.split("").filter(x => x !== '\r'));
     let gammaRate = [];
     let epsilonRate = [];
     let columns = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -19,6 +20,7 @@ fs.readFile('src/inputs/day3.txt', 'utf8' , (err, data) => {
             }
         })
     });
+
     for(let i = 0; i < columns.length; i++)
     {
         if(columns[i] > 0)
@@ -34,24 +36,21 @@ fs.readFile('src/inputs/day3.txt', 'utf8' , (err, data) => {
     }
     console.log(parseInt(gammaRate.join(""), 2) * parseInt(epsilonRate.join(""), 2));
 
-
     //WIP
-    //let oxyGenRate = [];
-    //for(let i = 0; i < columns.length; i++)
+    //let oxyGenRate = dataArray;
+    //for(let i = 0; i < oxyGenRate.length; i++)
     //{
-    //    if(columns[i] > 0)
+    //    for(let j = 0; j < oxyGenRate[i].length; j++)
     //    {
-    //        data.forEach((line, index) => {
-    //            if(line[i] == 1)
-    //            {
-    //                oxyGenRate.push(line);
-    //            }
-    //        });
-    //    }
-    //    if(columns[i] < 0)
-    //    {
-    //        
+    //        if(oxyGenRate[i][j] != gammaRate[j])
+    //        {
+//
+    //            oxyGenRate.splice(i, 1);
+    //            i = 0;
+    //        }
     //    }
     //}
+    //console.log(oxyGenRate);
+    //console.log(gammaRate)
 })
 
